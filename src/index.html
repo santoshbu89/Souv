@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Souvenirs R Us | White Artisans</title>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.png" type="image/png" />
+	<!-- Polyfill(s) for older browsers -->
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Core - ALways load first -->
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- Animatations -->
+	<link href="css/icomoon.css" rel="stylesheet">
+	<!-- Icon Font -->
+	<link href="css/flexslider.css" rel="stylesheet">
+	<!-- Flexslider styles for #blogfeed -->
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Main theme stylesheet -->
+	<link href="css/custom.css" rel="stylesheet">
+	<!-- Custom styles - Always load last -->
+
+	<!-- Load our fonts from Google -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+	</script>
+
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+
+	<script src="systemjs.config.js"></script>
+	<script>
+		System.import('main.js').catch(function (err) { console.error(err); });
+	</script>
+</head>
+
+<body id="home">
+	<div class="loadstack">
+		<div class="spinner"></div>
+	</div>
+
+	<my-app></my-app>
+
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Bootstrap core - always load first -->
+	<script src="js/wow.min.js"></script>
+	<!-- WoW animations -->
+	<script src="js/jquery.nav.js"></script>
+	<!-- Left-hand bullet navigation -->
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<!-- Scrollbars for whole page and main navigation -->
+	<script src="js/jquery.counterup.min.js"></script>
+	<!-- counterup plugin for increasing page stats -->
+	<script src="js/waypoints.min.js"></script>
+	<!-- Waypoints, needed for 'counterup' plugin -->
+	<script src="js/jquery.fitvids.js"></script>
+	<!-- Fitvids plugin, (responsive videos) -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- Easing plugin, for opacity fade on menu background images -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/scripts.js"></script>
+	<!-- Custom JS functions - always load last -->
+
+	<!-- Initialize CounterUp plugin for rounding up/animated statistics -->
+	<script>
+		jQuery(document).ready(function ($) {
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
+			});
+		});
+	</script>
+
+	<!-- Initialize fitvids.js plugin for responsive videos -->
+	<script>
+		$(document).ready(function () {
+			$(".fitvids").fitVids();
+		});
+	</script>
+
+	<!-- Initialize Hero Slider -->
+	<script>
+		$(document).ready(function () {
+			$('.carousel').carousel()
+		});
+	</script>
+
+	<!-- Initialize flexslider for blog-roll slider -->
+	<script>
+		// second-flexslider
+		$(window).load(function () {
+			$('#blogslider').flexslider({
+				animation: "slide",
+				directionNav: false,
+				controlNav: false,
+				touch: false,
+				slideshow: false
+			});
+		});
+		$('.prev, .next').on('click', function () {
+			var href = $(this).attr('href');
+			$('#blogslider').flexslider(href)
+			return false;
+		})
+	</script>
+
+	<!-- Initialize Teamimonials Carousel -->
+	<script>
+		$(document).ready(function () {
+			$('#testo-carousel').carousel({
+				pauseOnHover: true,
+				interval: 4000,
+			});
+		});
+	</script>
+
+</body>
+
+</html>

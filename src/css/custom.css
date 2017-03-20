@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+ * White Artisans
+ * Custom Styles
+ * File: css/custom.css
+ *
+ */
+
+/* Begin custom styles */
+#map-locations-canvas {
+	height: 650px;
+}
